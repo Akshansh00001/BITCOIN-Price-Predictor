@@ -11,18 +11,18 @@ import streamlit as st
 
 # Page configuration
 st.set_page_config(page_title="BTC Predictor", layout="wide")
-st.title("🚀 Bitcoin Price Predictor")
+st.title(" Bitcoin Price Predictor")
 st.markdown("---")
 
 # Sidebar for navigation
-page = st.sidebar.radio("Navigation", ["📊 Data Analysis", "🤖 Model Training", "🔮 Predictions"])
+page = st.sidebar.radio("Navigation", [" Data Analysis", " Model Training", " Predictions"])
 
 # Create output directory
 output_dir = Path('output')
 output_dir.mkdir(exist_ok=True)
 
 # ==================== PAGE 1: DATA ANALYSIS ====================
-if page == "📊 Data Analysis":
+if page == " Data Analysis":
     st.header("Data Analysis & Exploration")
     
     # File upload
@@ -87,7 +87,7 @@ if page == "📊 Data Analysis":
         st.warning("⚠️ Please upload a CSV file to begin analysis")
 
 # ==================== PAGE 2: MODEL TRAINING ====================
-elif page == "🤖 Model Training":
+elif page == " Model Training":
     st.header("Train Machine Learning Model")
     
     if 'df' not in st.session_state:
@@ -131,7 +131,7 @@ elif page == "🤖 Model Training":
             random_state = st.number_input("Random State", value=42)
         
         # Train model button
-        if st.button("🎯 Train Model", key="train"):
+        if st.button(" Train Model", key="train"):
             with st.spinner("Training model..."):
                 X_train, X_test, y_train, y_test = train_test_split(
                     X, y, test_size=test_size/100, random_state=random_state
@@ -187,7 +187,7 @@ elif page == "🤖 Model Training":
             st.pyplot(fig)
 
 # ==================== PAGE 3: PREDICTIONS ====================
-elif page == "🔮 Predictions":
+elif page == " Predictions":
     st.header("Make Predictions")
     
     if 'model' not in st.session_state:
@@ -241,4 +241,4 @@ elif page == "🔮 Predictions":
 
 # Footer
 st.markdown("---")
-st.markdown("Built with ❤️ using Streamlit | BTC Predictor v1.0")
+
