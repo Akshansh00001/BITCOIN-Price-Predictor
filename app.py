@@ -115,7 +115,7 @@ elif page == " Model Training":
         
         # Feature selection
         st.write("Selected Features:")
-        features = ['Open', 'High', 'Low', 'Close', 'Volume', 'hour', 'day']
+        features = ['Date','Open', 'High', 'Low', 'Close', 'Adj close','Volume', 'hour', 'day']
         st.write(features)
         
         X = df[features]
